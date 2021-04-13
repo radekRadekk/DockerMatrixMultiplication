@@ -1,0 +1,46 @@
+version: "3"
+services:
+  queue:
+    build:
+      context: .
+      dockerfile: Docker/Queue/Dockerfile
+    ports: [ "12345:12345" ]
+  master-node:
+    build:
+      context: .
+      dockerfile: Docker/MasterNode/Dockerfile
+    volumes:
+      - ./Data:/Data
+  slave-node-1:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-2:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-3:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-4:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-5:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-6:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-7:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+  slave-node-8:
+    build:
+      context: .
+      dockerfile: Docker/SlaveNode/Dockerfile
+
